@@ -1,14 +1,24 @@
 import React, { useState } from "react";
-import classNames from "classnames";
 
-import "../css/ColorPicker.css";
+
 import Size from './Size'
 
 const SizePicker = () => {
     const size = [18, 20, 22, 24, 26];
 
+    const [curSize, setCurSize] = useState(18);
+
+    const checkActive = curSize => {
+        return () => {
+            setCurSize(curSize);
+        }
+    }
+
+    const isActive = size => (curSize === size);
+
+
     const sizeList = size.map( (x, index) => {
-        return <Size size={x} key={index} />
+        return <Size size={x} key={index} checkActive={checkActive(x)} isActive={ isActive(x) }/>
     })
 
 

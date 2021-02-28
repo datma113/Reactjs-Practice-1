@@ -12,6 +12,10 @@
     cursor: pointer;
 }
 
+.color-elmt:hover {
+    border: 3px solid black;
+}
+
 .isActive {
-    border: 5px solid black;
+    border: 5px solid blue;
 }

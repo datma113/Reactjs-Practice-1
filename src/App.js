@@ -4,6 +4,12 @@ import ColorPicker from "./components/ColorPicker";
 import SizePicker from "./components/SizePicker";
 
 function App() {
+
+  const setTextFromColorPicker = (value) => {
+    console.log(`value: ${value}`);
+  }
+
+
   return (
     <div className="App">
       <div className="container">
@@ -11,7 +17,7 @@ function App() {
         <hr />
         <div className="row">
           <div className="col-6">
-            <ColorPicker />
+            <ColorPicker dataSent={setTextFromColorPicker} />
           </div>
           <div className="col-6">
             <SizePicker />
