@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import ColorPicker from "./components/ColorPicker";
+import SizePicker from "./components/SizePicker";
 
 function App() {
   return (
@@ -10,7 +11,10 @@ function App() {
         <hr />
         <div className="row">
           <div className="col-6">
-            <ColorPicker className="col-6" />
+            <ColorPicker />
+          </div>
+          <div className="col-6">
+            <SizePicker />
           </div>
         
          
