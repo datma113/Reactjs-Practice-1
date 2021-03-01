@@ -5,14 +5,18 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import ColorPicker from "./components/ColorPicker";
 import SizePicker from "./components/SizePicker";
 import NavComp from "./components/NavComp";
-import Main from "./components/Main";
-import About from "./components/About";
-import Contact from "./components/Contact";
+
+import Routes from './Routes'
+
 
 function App() {
   const setTextFromColorPicker = (value) => {
     console.log(`value: ${value}`);
   };
+
+  const routesRender = Routes.map((route, index) => {
+    return <Route path={route.path} exact={route.exact} component={route.component} key={index}/>
+  });
 
   return (
     <Router>
@@ -31,9 +35,7 @@ function App() {
           <br></br>
           <NavComp />
         </div>
-        <Route path="/" exact component={Main} />
-        <Route path="/contact"  component={Contact} />
-        <Route path="/about"  component={About} />
+        {routesRender}
       </div>
     </Router>
   );

@@ -1,7 +1,14 @@
 import React from "react";
-import { Link, Route, BrowserRouter } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 
 const NavComp = (props) => {
+
+  const routes = [
+    {title: 'Trang chủ', to: '/', exact: true},
+    {title: 'liên hệ', to: '/contact', exact: false},
+    {title: 'about', to: '/about', exact: false},
+  ];
+
   const CustomLink = ({ to, label, activeOnlyWhenExact }) => {
     return (
       <Route
@@ -21,12 +28,14 @@ const NavComp = (props) => {
     );
   };
 
+  const routesRender = routes.map( (route, index) => {
+    return <CustomLink key={index} label={route.title} to={route.to} activeOnlyWhenExact={route.exact} />
+  });
+
   return (
     <div>
       <ul className="nav">
-        <CustomLink label="Trang chủ" to="/" activeOnlyWhenExact={true} />
-        <CustomLink label="liên hệ" to="/contact" />
-        <CustomLink label="about" to="/about" />
+        {routesRender}
       </ul>
     </div>
   );
