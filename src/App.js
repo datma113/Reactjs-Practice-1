@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import ColorPicker from "./components/ColorPicker";
 import SizePicker from "./components/SizePicker";
 import NavComp from "./components/NavComp";
+import AnotherNav from './components/AnotherNav'
 
 import Routes from './Routes'
 
@@ -34,8 +35,9 @@ function App() {
           </div>
           <br></br>
           <NavComp />
+          <AnotherNav />
         </div>
-        {routesRender}
+             {routesRender}
       </div>
     </Router>
   );
