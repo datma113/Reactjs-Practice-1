@@ -6,7 +6,7 @@ import ColorPicker from "./components/ColorPicker";
 import SizePicker from "./components/SizePicker";
 import NavComp from "./components/NavComp";
 import AnotherNav from './components/AnotherNav'
-
+import TestRedux from './components/TestRedux'
 import Routes from './Routes'
 
 
@@ -37,7 +37,8 @@ function App() {
           <NavComp />
           <AnotherNav />
         </div>
-             {routesRender}
+        {routesRender}
+        <TestRedux/>
       </div>
     </Router>
   );

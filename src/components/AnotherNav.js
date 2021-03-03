@@ -10,8 +10,8 @@ const AnotherNav = () => {
         children={({ match }) => {
           let matchesClass = match ? "class nav-item" : "nav-item";
           return (
-            <li class={matchesClass}>
-              <Link class="nav-link " to={to} exact={activeOnlyWhenExact}>
+            <li className={matchesClass}>
+              <Link className="nav-link " to={to} exact={activeOnlyWhenExact}>
                 {label}
               </Link>
             </li>
@@ -33,7 +33,7 @@ const AnotherNav = () => {
 
   return (
     <div>
-      <ul class="nav justify-content-end">
+      <ul className="nav justify-content-end">
         {routesRender}
       </ul>
     </div>
