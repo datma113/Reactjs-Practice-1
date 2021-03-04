@@ -1,0 +1,3 @@
+export const TONGGLE_STATUS = 'TOGGLE_STATUS'
+
+export const CHANGE_TEXT = 'CHANGE_TEXT'
