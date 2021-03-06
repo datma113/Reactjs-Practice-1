@@ -1,10 +1,9 @@
 import React from "react";
 import classNames from "classnames";
 
+
 import  "../css/SizePicker.css";
 import Styles from '../css/SizePicker.module.css'
-
-
 
 const Size = ({ size, checkActive, isActive }) => {
   return (
