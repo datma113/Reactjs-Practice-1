@@ -8,6 +8,7 @@ import NavComp from "./components/NavComp";
 import AnotherNav from './components/AnotherNav'
 import TestRedux from './components/TestRedux'
 import Routes from './Routes'
+import Array from './components/Array'
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
         </div>
         {routesRender}
         <TestRedux/>
+        <Array />
       </div>
     </Router>
   );

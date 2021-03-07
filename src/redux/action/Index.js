@@ -1,4 +1,3 @@
-
 import * as types from '../constants/ActionTypes'
 
 export const action1 = () => {
@@ -11,5 +10,12 @@ export const actionWithParameters = (somethings) => {
      return {
           type: types.CHANGE_TEXT,
           somethings
+     }
+}
+
+export const addItem = (item) => {
+     return {
+          type: types.ADD_ITEM,
+          item,
      }
 }
