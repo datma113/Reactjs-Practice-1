@@ -1,25 +1,29 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import axios from 'axios'
+
 const TestAPI = () => {
 
-     let url = 'http://localhost:8080/Springmvc_linhkienmaytinh/api/hoadons'
+     let url = 'http://localhost:8080/Springmvc_linhkienmaytinh/api/nhanviens'
    
-
-     const getData = () => {
-
-        axios.get(url)
-        .then( res => {
-          console.log(res)
+     let data = []
+     useEffect(() => {
+        axios.get(url).then(res => {
+             data = (res.data)
         })
-        .catch( err => {
-             console.log(`=========`)
+        .catch(err => {
              console.log(err)
         })
-     }     
+    })
+
+    setTimeout(() => {
+         const dataMap = data.map( x => {
+              return <p>x.manhanvien</p>
+         })
+    }, 5000);
      return (
           <div className="container">
                test api 
-               <button onClick={getData}>click</button>
+           
           </div>
      )
 }
