@@ -2,7 +2,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-
 import ColorPicker from "./components/ColorPicker";
 import SizePicker from "./components/SizePicker";
 import NavComp from "./components/NavComp";
@@ -11,10 +10,9 @@ import TestRedux from "./components/TestRedux";
 import Routes from "./Routes";
 import Array from "./components/Array";
 import TestAPI from "./components/TestAPI";
+import Orders from "./components/Orders";
 
 function App() {
-    
-
     const setTextFromColorPicker = (value) => {
         console.log(`value: ${value}`);
     };
@@ -47,6 +45,7 @@ function App() {
                 <TestRedux />
                 <Array />
                 <TestAPI />
+                <Orders />
             </div>
         </Router>
     );
