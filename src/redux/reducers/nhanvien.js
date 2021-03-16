@@ -5,9 +5,8 @@ let initState = []
 
 const reducer = (state = initState, action) => {
 
-    if(action.types === types.UPLOAD_DATA) {
-        console.log(`data thunk:`, action.data)
-        return [...state, action.data]
+    if(action.type === types.UPLOAD_DATA) {
+        return  action.data
     }
    return state
 };
